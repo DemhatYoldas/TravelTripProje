@@ -13,5 +13,27 @@ namespace TravelTripProje.Controllers
         {
             return View();
         }
+
+        public ActionResult About() 
+        {
+            return View();
+        }
+
+        public ActionResult Destinations()
+        {
+            return View();
+        }
+
+        public ActionResult FreeTravelGuides ()
+        {
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            return View();
+        }
+
+    
     }
 }

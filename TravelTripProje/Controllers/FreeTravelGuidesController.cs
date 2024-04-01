@@ -6,12 +6,12 @@ using System.Web.Mvc;
 
 namespace TravelTripProje.Controllers
 {
-    public class DefaultController : Controller
+    public class FreeTravelGuidesController : Controller
     {
-        // GET: Dashboard
+        // GET: FreeTravelGuides
         public ActionResult Index()
         {
             return View();
-        }    
+        }
     }
 }

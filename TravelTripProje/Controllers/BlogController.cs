@@ -17,9 +17,10 @@ namespace TravelTripProje.Controllers
             return View(bloglar);
         }
 
-        public ActionResult BlogDetay()
+        public ActionResult BlogDetay(int id )
         {
-            return View();
+            var blogbul = c.Blogs.FirstOrDefault(x=>x.ID==id); 
+            return View(blogbul);
         }
     }
 } 

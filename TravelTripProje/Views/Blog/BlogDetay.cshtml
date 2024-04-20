@@ -1,4 +1,4 @@
-﻿@model TravelTripProje.Models.Siniflar.Blog
+﻿@model TravelTripProje.Models.Siniflar.BlogYorum
 
 @{
     ViewBag.Title = "BlogDetay";
@@ -32,15 +32,39 @@
     <div class="single">
         <div class="container">
             <div class="col-md-8 single-main">
-                <div class="single-grid">
-                    <div class="content-grid-info">
-                        <img src="@Model.BlogImage" alt="" style="margin-bottom:20px" />
-                        <div class="single-grid">
-                            <h2>@Model.Baslik</h2>
-                            <p>@Model.Aciklama</p>
-                            <p>@Model.Tarih</p>
-                        </div>
+                @foreach (var item in Model.Blogdegeri)
+                {
+                    <div class="single-grid">
+                        <img src="@item.BlogImage" alt="" style="margin-bottom:20px" />
+                        <p>
+                            @item.Aciklama
+                        </p>
                     </div>
+                }
+
+
+                @foreach (var item in Model.Yorumdegeri)
+                {
+                    <ul class="comment-list">
+                        <li>
+                            <img src="/web2/images/avatar.png" class="img-responsive" alt="">
+                            <div class="desc">
+                                <p>@item.KullaniciAdi :   @item.Yorum </p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+                    </ul>
+                }
+
+
+                <div class="content-form">
+                    <h3>Bir Yorum Yapın</h3>
+                    <form>
+                        <input type="text" placeholder="Kullanıcı Adı" required />
+                        <input type="text" placeholder="Mail Adresi" required />
+                        <textarea placeholder="Yorum"></textarea>
+                        <input type="submit" value="Gönder" />
+                    </form>
                 </div>
             </div>
 

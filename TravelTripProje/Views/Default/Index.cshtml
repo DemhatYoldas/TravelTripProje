@@ -1,4 +1,5 @@
-﻿
+﻿@using TravelTripProje.Models.Siniflar
+@model List<Blog>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -18,7 +19,7 @@
                                 <img src="/Web/images/glass.png" alt="">
                             </div>
                             <div class="grid1-desc">
-                                <p>Restaurants</p>
+                                <p>Restaurantlar</p>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -27,7 +28,7 @@
                                 <img src="/Web/images/flight.png" alt="">
                             </div>
                             <div class="grid1-desc">
-                                <p>Flights</p>
+                                <p>Uçuşlar</p>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -36,7 +37,7 @@
                                 <img src="/Web/images/group.png" alt="">
                             </div>
                             <div class="grid1-desc">
-                                <p>Things to do</p>
+                                <p>Ypılacak Şeyler</p>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -45,7 +46,7 @@
                                 <img src="/Web/images/key.png" alt="">
                             </div>
                             <div class="grid1-desc">
-                                <p>Vacation Rents</p>
+                                <p>Araç Kiralama</p>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -55,10 +56,15 @@
 
                         <div class="slider">
                             <ul class="rslides" id="slider1">
-                                <li><img src="/Web/images/img1.jpg" alt=""></li>
-                                <li><img src="/Web/images/img2.jpg" alt=""></li>
-                                <li><img src="/Web/images/img3.jpg" alt=""></li>
-                                <li><img src="/Web/images/img4.jpg" alt=""></li>
+
+                                @foreach (var item in Model)
+                                {
+                                    <li><img src="@item.BlogImage" style="width: 540px; height: 360px;" alt=""></li>
+                                }
+
+                                @*<li><img src="/Web/images/img2.jpg" alt=""></li>
+        <li><img src="/Web/images/img3.jpg" alt=""></li>
+        <li><img src="/Web/images/img4.jpg" alt=""></li>*@
                             </ul>
                         </div>
                     </div>

@@ -15,5 +15,11 @@ namespace TravelTripProje.Controllers
             var degerler = c.Blogs.ToList(); 
             return View(degerler);
         }    
+
+        public PartialViewResult partial1()
+        {
+            var degeler =c.Blogs.OrderByDescending(x=>x.ID).Take(2).ToList();   
+            return PartialView(degeler);
+        }
     }
 }

@@ -260,6 +260,7 @@
     <Content Include="Views\FreeTravelGuides\Index.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
     <Content Include="Views\Blog\BlogDetay.cshtml" />
+    <Content Include="Views\Default\partial1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

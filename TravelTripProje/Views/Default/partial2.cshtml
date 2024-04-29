@@ -1,11 +1,9 @@
 ﻿@using TravelTripProje.Models.Siniflar
 @model List<Blog>
-
-<div class="con-bot">
-
-    @foreach (var item in Model)
-    {
-        <div class="left">
+@foreach (var item in Model)
+{
+    <div class="con-bot">
+        <div class="right">
             <div class="bot-left">
                 <img src="@item.BlogImage" style="width: 270px; height: 160px;" alt="" />
             </div>
@@ -16,9 +14,8 @@
                 <p>@item.Aciklama.Substring(0,60)</p>
                 <p><a href="/Blog/BlogDetay/@item.ID"><span class="read">Devamını Oku</span></a></p>
             </div>
-
         </div>
+    </div>
     }
-       @Html.Action("partial2", "Default")
 
-</div>
+

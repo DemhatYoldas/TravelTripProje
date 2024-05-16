@@ -263,6 +263,8 @@
     <Content Include="Views\Default\partial1.cshtml" />
     <Content Include="Views\Default\partial2.cshtml" />
     <Content Include="Views\Default\partial3.cshtml" />
+    <Content Include="Views\Default\partial4.cshtml" />
+    <Content Include="Views\Default\partial5.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

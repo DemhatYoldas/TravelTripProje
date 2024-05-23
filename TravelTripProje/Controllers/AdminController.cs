@@ -17,5 +17,9 @@ namespace TravelTripProje.Controllers
             return View(deger);
         }
 
+        public ActionResult YeniBlog()
+        {
+            return View();
+        }
     }
 }

@@ -17,9 +17,18 @@ namespace TravelTripProje.Controllers
             return View(deger);
         }
 
+        [HttpGet]
         public ActionResult YeniBlog()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Yeniblog(Blog b)
+        {
+            c.Blogs.Add(b);
+            c.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

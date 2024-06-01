@@ -55,8 +55,11 @@ namespace TravelTripProje.Controllers
         }
         public ActionResult BlogGuncelle(Blog b)
         {
-            var update=c.Blogs.Find(b);
-            c.Blogs.AddOrUpdate(update);
+            var update=c.Blogs.Find(b.ID);
+            update.BlogImage = b.BlogImage;
+            update.Baslik = b.Baslik;
+            update.Tarih = b.Tarih;
+            update.Aciklama = b.Aciklama;
             c.SaveChanges();
             return RedirectToAction("Index");
         }

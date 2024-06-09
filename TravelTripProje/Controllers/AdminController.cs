@@ -70,5 +70,20 @@ namespace TravelTripProje.Controllers
             return View(yorum);
         }
 
+        public ActionResult Yorumsil(int id)
+        {
+            var yorum = c.yorumlars.Find(id);
+            if (yorum != null)
+            {
+                yorum.Durum = false;
+                c.SaveChanges();
+                return RedirectToAction("Yorumlar");
+            }
+            else
+            {
+                return View();
+            }
+        }
+
     }
 }

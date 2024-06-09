@@ -15,6 +15,7 @@
         <th>Mail</th>
         <th>Yorum</th>
         <th>Blog</th>
+        <th>Durum</th>
         <th>Sil</th>
         <th>Güncelle</th>
         
@@ -26,9 +27,13 @@
             <td>@item.KullaniciAdi</td>
             <td>@item.Mail</td>
             <td>@item.Yorum</td>
-            <td><a style="color:green">@item.Blog.Baslik</a></td>
-            <td><a href="/Admin/BlogSil/@item.ID" class="btn btn-danger">Sil</a></td>
-        <td><a href="/Admin/BlogGetir/@item.ID" class="btn btn-warning">Düzenle</a></td>
+            <td>@item.Blog.Baslik</td>
+            <td style="color: @(item.Durum == true ? "green" : "red")">
+                @Html.Raw(item.Durum == true ? "Aktif" : "Pasif")
+            </td>
+
+            <td><a href="/Admin/Yorumsil/@item.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Admin/YorumGetir/@item.ID" class="btn btn-warning">Güncelle</a></td>
         </tr>
     }
 

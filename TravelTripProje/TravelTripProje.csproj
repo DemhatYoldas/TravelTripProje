@@ -272,6 +272,7 @@
     <Content Include="Views\Admin\BlogGetir.cshtml" />
     <Content Include="Views\Blog\YorumYap.cshtml" />
     <Content Include="Views\Admin\Yorumlar.cshtml" />
+    <Content Include="Views\Admin\Yorumgetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

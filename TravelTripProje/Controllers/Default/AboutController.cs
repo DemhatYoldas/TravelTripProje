@@ -19,6 +19,11 @@ namespace TravelTripProje.Controllers.Default
             return PartialView();
         }
 
+        public PartialViewResult PartialAboutUs()
+        {
+            return PartialView();
+        }
+
         public PartialViewResult PartialMission()
         {
             return PartialView();

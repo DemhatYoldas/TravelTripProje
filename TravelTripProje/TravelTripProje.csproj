@@ -128,6 +128,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Classes\About.cs" />
+    <Compile Include="Models\Classes\Blog.cs" />
+    <Compile Include="Models\Classes\Homepage.cs" />
+    <Compile Include="Models\Classes\Journey.cs" />
+    <Compile Include="Models\Classes\Mission.cs" />
+    <Compile Include="Models\Classes\Story.cs" />
+    <Compile Include="Models\Classes\Team.cs" />
+    <Compile Include="Models\Classes\Trip.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -396,11 +404,12 @@
     <Content Include="Views\Trips\PartialJourney.cshtml" />
     <Content Include="Views\Trips\PartialTripsList.cshtml" />
     <Content Include="Views\Trips\PartialStory.cshtml" />
+    <Content Include="Views\Blog\PartialOurBlog.cshtml" />
+    <Content Include="Views\Blog\PartialBlogDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\Admin\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

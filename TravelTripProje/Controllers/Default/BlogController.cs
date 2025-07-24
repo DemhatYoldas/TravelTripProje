@@ -13,5 +13,20 @@ namespace TravelTripProje.Controllers.Default
         {
             return View();
         }
+
+        public PartialViewResult PartialOurBlog()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult PartialBlogDetails()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult PartialBlogComment()
+        {
+            return PartialView();
+        }
     }
 }
